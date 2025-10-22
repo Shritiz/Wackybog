@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # optional: run build step if you have a build (npm run build)
+      # - name: Install deps
+      #   run: npm ci
+      # - name: Build
+      #   run: npm run build
+      #   # ensure built files are in ./dist or another path
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: .   # or ./dist if you build into dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
