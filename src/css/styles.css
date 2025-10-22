@@ -1,0 +1,107 @@
+:root {
+    --bg-color: #faf8ef;
+    --tile-bg: #eee4da;
+    --tile-color: #776e65;
+    --tile-bg-2: #ede0c8;
+    --tile-bg-4: #f2b179;
+    --tile-bg-8: #f59563;
+    --tile-bg-16: #f67c5f;
+    --tile-bg-32: #f67c5f;
+    --tile-bg-64: #f67c5f;
+    --tile-bg-128: #f9f86e;
+    --tile-bg-256: #f9f86e;
+    --tile-bg-512: #f9f86e;
+    --tile-bg-1024: #f9f86e;
+    --tile-bg-2048: #f9f86e;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    width: 400px;
+    height: 400px;
+    background-color: #bbada0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: var(--tile-color);
+    background-color: var(--tile-bg);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tile[data-value="2"] {
+    background-color: var(--tile-bg-2);
+}
+
+.tile[data-value="4"] {
+    background-color: var(--tile-bg-4);
+}
+
+.tile[data-value="8"] {
+    background-color: var(--tile-bg-8);
+}
+
+.tile[data-value="16"] {
+    background-color: var(--tile-bg-16);
+}
+
+.tile[data-value="32"] {
+    background-color: var(--tile-bg-32);
+}
+
+.tile[data-value="64"] {
+    background-color: var(--tile-bg-64);
+}
+
+.tile[data-value="128"] {
+    background-color: var(--tile-bg-128);
+}
+
+.tile[data-value="256"] {
+    background-color: var(--tile-bg-256);
+}
+
+.tile[data-value="512"] {
+    background-color: var(--tile-bg-512);
+}
+
+.tile[data-value="1024"] {
+    background-color: var(--tile-bg-1024);
+}
+
+.tile[data-value="2048"] {
+    background-color: var(--tile-bg-2048);
+}
+
+.tile.merged {
+    transform: scale(1.1);
+}
+
+.score {
+    font-size: 1.5em;
+    color: var(--tile-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
