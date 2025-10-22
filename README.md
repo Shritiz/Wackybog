@@ -22,9 +22,12 @@ To set up the project locally, follow these steps:
    cd 2048-game
    ```
 3. Open the `index.html` file in your web browser to start playing the game.
+   
+4. OR visit:
    ```
-4. OR visit https://shritiz.github.io/Wackybog/src/index.html
-
+    https://shritiz.github.io/Wackybog/src/index.html
+   ```
+   
 ## Project Structure
 
 - `src/index.html`: Main HTML document for the game.
