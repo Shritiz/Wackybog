@@ -1,52 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2048 Game</title>
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<button id="restartBtn" type="button" aria-label="Restart game">Restart</button>
-
-<script>
-  // Attach a safe restart handler
-  (function () {
-    const btn = document.getElementById('restartBtn');
-    if (!btn) return;
-
-    btn.addEventListener('click', () => {
-      // If your game exposes a global API, prefer calling it:
-      // e.g. window.game.reset() or window.game.init()
-      if (window.game && typeof window.game.reset === 'function') {
-        window.game.reset();
-        return;
-      }
-      if (window.game && typeof window.game.init === 'function') {
-        window.game.init();
-        return;
-      }
-
-      // Fallback: reload the page to restart the game
-      location.reload();
-    });
-  })();
-</script>
 <body>
-  <div class="game-container">
-    <header>
-      <h1>2048 Game</h1>
-      <div class="score-container">
-        <span>Score: </span><span id="score">0</span>
-      </div>
-    </header>
-    <div id="game-board" class="game-board"></div>
-    <footer>
-      <button id="restart-button">Restart</button>
-      <p>Use arrow keys to move tiles. Combine tiles with the same number to reach 2048!</p>
-    </footer>
-  </div>
-  <script src="js/input.js"></script>
-  <script src="js/game.js"></script>
-  <script src="js/ui.js"></script>
+    <div class="game-container">
+        <h1>2048 Game</h1>
+        <div class="grid-container">
+            <div class="grid">
+                <!-- Game tiles will be dynamically generated here -->
+            </div>
+        </div>
+        <div class="score-container">
+            <div class="score">Score: <span id="score">0</span></div>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
   "name": "2048-game",
   "version": "1.0.0",
-  "description": "A simple and appealing implementation of the 2048 game.",
-  "main": "src/js/game.js",
+  "description": "A web-based version of the classic 2048 game.",
+  "main": "src/script.js",
   "scripts": {
     "start": "live-server src",
     "build": "echo 'Build step not defined'",
@@ -11,13 +11,12 @@
   "keywords": [
     "2048",
     "game",
-    "javascript",
-    "html",
-    "css"
+    "web"
   ],
   "author": "Your Name",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "live-server": "^1.2.1"
   }
 }
