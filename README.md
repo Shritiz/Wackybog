@@ -1,4 +1,4 @@
 # Wackybog
-a bot that allows communication with ai with voice or text 
+simple web page
 
 Dev:- Shritiz
