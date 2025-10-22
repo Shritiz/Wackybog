@@ -17,9 +17,9 @@ To set up the project locally, follow these steps:
    ```
    git clone <repository-url>
    ```
-2. Navigate to the project directory:
+2. Navigate to the project directory's main Folder
    ```
-   cd 2048-game
+   src
    ```
 3. Open the `index.html` file in your web browser to start playing the game.
    
@@ -27,7 +27,7 @@ To set up the project locally, follow these steps:
    ```
     https://shritiz.github.io/Wackybog/src/index.html
    ```
-   
+
 ## Project Structure
 
 - `src/index.html`: Main HTML document for the game.
